@@ -22,6 +22,11 @@
   margin-bottom: 1rem;
 }
 
+.fcf-form-group > a {
+  text-decoration: none;
+  color: white;
+}
+
 .fcf-input-group {
   position: relative;
   display: -ms-flexbox;

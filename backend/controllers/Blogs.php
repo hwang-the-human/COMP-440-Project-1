@@ -34,7 +34,7 @@ class Blogs extends Controller
                 // Store each tag in an array
                 $tags = rtrim($_POST['tags'], ',');
                 $tags = filter_var($tags, FILTER_SANITIZE_STRING);
-                $tags = explode(',', $tags);
+                $tags = explode(', ', $tags);
 
                 // Collect POST data
                 $data = [

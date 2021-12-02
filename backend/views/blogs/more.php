@@ -14,7 +14,7 @@
         <ul>
             <?php if (!empty($data['comments'])) : ?>
                 <?php foreach ($data['comments'] as $comment) : ?>
-                    <li><?php echo $comment->posted_by; ?>: <?php echo $comment->description; ?> (<?php echo $comment->sentiment; ?>)</li>
+                    <li><strong>(<?php echo $comment->sentiment; ?>)</strong> <?php echo $comment->posted_by; ?>: <?php echo $comment->description; ?></li>
                 <?php endforeach; ?>
             <?php endif; ?>
         </ul>
@@ -23,7 +23,7 @@
 
         <form id="fcf-form-id" class="fcf-form-class" method="POST" action="<?php echo URLROOT; ?>/blogs/comment">
             <div class="fcf-form-group">
-                <input type="radio" name="rating" value="positive"> Positive<br>
+                <input type="radio" name="rating" value="positive" required> Positive<br>
                 <input type="radio" name="rating" value="negative"> Negative<br>
             </div>
 
@@ -35,7 +35,7 @@
             </div>
 
             <div class="fcf-form-group">
-                <button type="submit" id="fcf-button" class="fcf-btn fcf-btn-primary fcf-btn-lg fcf-btn-block" onclick="history.back()">Back</button>
+                <a href="<?php echo URLROOT; ?>/blogs"><button type="button" id="fcf-button" class="fcf-btn fcf-btn-primary fcf-btn-lg fcf-btn-block">Back</button></a>
             </div>
 
             <input type="hidden" name="blogId" value="<?php echo $data['blog']->blogid; ?>">

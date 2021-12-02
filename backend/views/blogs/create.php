@@ -27,7 +27,7 @@
             </div>
 
             <div class="fcf-form-group">
-                <button type="submit" id="fcf-button" class="fcf-btn fcf-btn-primary fcf-btn-lg fcf-btn-block" onclick="history.back()">Back</button>
+                <a href="<?php echo URLROOT; ?>/blogs"><button type="button" id="fcf-button" class="fcf-btn fcf-btn-primary fcf-btn-lg fcf-btn-block">Back</button></a>
             </div>
 
             <div class="fcf-form-group">
